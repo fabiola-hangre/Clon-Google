@@ -1,0 +1,217 @@
+/* Esto nos sirve para resetear el css que el navegador nos da, sirve par quitarle todos los estilos de todas 
+las etiquetas.*/
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu-icon:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-radius: 80%;
+    border-color: #dfe1e500;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: underline;
+}
+header nav .nav-right-section img:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+header {
+    width: 100%;
+    height: 60px;
+}
+header nav {
+    /*sirve para posicionar su contenido*/
+    display: flex;
+    /*justifica el contenido, quiere decir o lo manda a uno de los extremos o lo coloca en el centro*/
+    justify-content: flex-end;
+}
+/*Una clase es el identificador que le ponemos a una etiqueta de html para que atraves de css podamos darle un 
+estilo unico, las clases son genericas, se usan para las secciones que se van a repetir*/
+/*Los id son unicos, los id se deben utilizar solo para ese elemento que no va a cambiar y que ya no va haber mas de uno*/
+header nav .nav-right-section {
+    /*cuando esta en pixeles, es un tamaño definido*/
+    width: 250px;
+    height: auto;
+    /*para poder posicionar los elementos de nav*/
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #000000;
+}
+nav ,.nav-right-section a::after {
+    margin-left: 10px;
+}
+
+nav .nav-right-section .menu-icon {
+    background-image: url("https://static.thenounproject.com/png/756729-200.png");
+    /*sirve para evitar que la imagen se repita, ya que cuando achicamos la imagen ella se repite para llenar el espacio del contenedor*/
+    background-repeat: no-repeat;
+    /*sirve para que la imagen quede en el centro*/
+    background-position: center;
+    /*sirve para que este al tamaño de mi contenedor o se aproxime al tamaño de mi contenedor*/
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+nav .nav-right-section img {
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+main {
+    margin-top: 70px;
+    text-align: center;
+}
+main .main-logo {
+    width: 530px;
+    /*auto, sirve para dividir el espacio que sobra en dos y lo coloca en left y el right*/
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+main .main-logo img {
+    width: 272px;
+    right: 92px;
+}
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main-input input {
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+main .main-input .search-icon {
+    background-image: url("https://img.icons8.com/android/24/000000/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+}
+main .main-input .micro-icon {
+    background-image: url("https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+/* main .main-buttons {
+    display: flex;
+} */
+main .main-buttons div {
+    /*layout*/
+    display: inline-block;
+}
+main .main-buttons button {
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #000001;
+    color: #222;
+}
+main .main-span {
+    color: #222;
+    margin-bottom: 180px;
+}
+
+main .main-span a {
+    color: #1a0dab;
+}
+footer {
+    display: grid;
+}
+footer .div-span {
+    height: 25px;
+    font-size: 15px;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 15px 30px;   
+    color: #5f6368;
+}
+footer .main-div {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    /*sirve para generar la cuadricula con la que vamos a colocar el contenido de nuestro proyecto y podemos 
+    decidir las fracciones de la misma*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 15px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+footer ul {
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+footer .footer-left {
+    justify-self: left;
+}
+footer .footer-right {
+    justify-self: right;
+}
+footer ul li a {
+    margin: 10px;
+    color: #5f6368;
+}
+
+/*el grid, sirve para posicionar las etiquetas contenedoras y el flex, para posicionar el contenido que este 
+adentro de las etiquetas contenedoras*/
